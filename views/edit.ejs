@@ -1,0 +1,30 @@
+<%- include ('partials/header') %>
+<div class="container">
+<h1> New movie </h1>
+
+<form action="/videos/<%= vid._id %>?_method=PUT" method="post">
+
+<div class="form-group">
+	<input type="text" name="title" class="form-control" placeholder="title" value="<%= vid.title %>">
+</div>
+ <div class="form-group">
+	<input type="text" name="genre" class="form-control" placeholder="genre" value="<%= vid.genre %>">
+</div>
+<div class="form-group">
+	<input type="text" name="image" class="form-control" placeholder="image name" value="<%= vid.image %>">
+</div>
+ <div class="form-group">
+	<textarea name="desc" class="form-control" placeholder="description"><%= vid.description %></textarea>
+</div>
+<div class="form-group">
+	<button type="submit" class="btn btn-info" >Save</button>
+</div>
+
+
+</form>
+
+<a href="/">Cancel</a>
+
+</div>
+
+<%- include ('partials/footer') %>
